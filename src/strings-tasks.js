@@ -355,13 +355,13 @@ function isPalindrome(str) {
  */
 function findLongestWord(sentence) {
   const newStr = sentence.split(' ');
-  let big = '';
+  let bigStr = '';
   for (let i = 0; i < newStr.length; i += 1) {
-    if (newStr[i].length > big.length) {
-      big = newStr[i];
+    if (newStr[i].length > bigStr.length) {
+      bigStr = newStr[i];
     }
   }
-  return big;
+  return bigStr;
 }
 
 /**
