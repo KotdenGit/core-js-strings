@@ -332,13 +332,13 @@ function countVowels(str) {
  *   isPalindrome('No lemon, no melon') => true
  */
 function isPalindrome(str) {
-  const rev = str
+  const strRev = str
     .split('')
     .reverse()
     .join('')
     .replace(/[^\w]|_/g, '')
     .toLowerCase();
-  return str.toLowerCase().replace(/[^\w]|_/g, '') === rev;
+  return str.toLowerCase().replace(/[^\w]|_/g, '') === strRev;
 }
 
 /**
@@ -355,13 +355,13 @@ function isPalindrome(str) {
  */
 function findLongestWord(sentence) {
   const newStr = sentence.split(' ');
-  let bigStr = '';
+  let bigChar = '';
   for (let i = 0; i < newStr.length; i += 1) {
-    if (newStr[i].length > bigStr.length) {
-      bigStr = newStr[i];
+    if (newStr[i].length > bigChar.length) {
+      bigChar = newStr[i];
     }
   }
-  return bigStr;
+  return bigChar;
 }
 
 /**
@@ -395,7 +395,6 @@ function reverseWords(str) {
  *   invertCase('12345') => '12345'
  */
 function invertCase(str) {
-  invertCase(str) {
   const newStr = str
     .split('')
     .map((char) => {
