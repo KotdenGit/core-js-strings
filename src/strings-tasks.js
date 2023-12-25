@@ -20,7 +20,10 @@
  *   getStringLength(undefined) => 0
  */
 function getStringLength(value) {
-  return value.length;
+  if (typeof value === 'string') {
+    return value.length;
+  }
+  return 0;
 }
 
 /**
